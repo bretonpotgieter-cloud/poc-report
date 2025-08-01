@@ -21,19 +21,8 @@
             font-family: 'Inter', sans-serif;
             background-color: #f8f9fa;
         }
-        .highlight-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .highlight-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-        }
-        .video-thumbnail.active {
-            border-color: #2563eb;
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
-        }
-        .video-thumbnail {
-            transition: all 0.2s ease-in-out;
+        .feature-item {
+            border-left: 4px solid #3b82f6;
         }
     </style>
 </head>
@@ -41,15 +30,16 @@
 
     <div class="max-w-5xl mx-auto p-4 sm:p-8">
 
-        <header class="py-8 md:py-12 mb-12">
-            <div class="flex justify-end">
-                <img src="EES Live logo small.jpg" alt="EES Live Logo" class="h-10 sm:h-12">
+        <header class="py-8 md:py-12">
+            <div class="flex justify-center mb-8">
+                <img src="EES Live logo big.jpg" alt="EES Live Logo" class="h-16 sm:h-20">
             </div>
-            <div class="text-center mt-4">
+            <div class="text-center">
                 <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">
                     Idemia VisionPass SP
                 </h1>
                 <p class="mt-4 text-xl md:text-2xl font-medium text-blue-600">A Resounding Success at Riverlands</p>
+                <p class="mt-4 text-base text-gray-500">PoC Test Date: 01 August 2025</p>
             </div>
         </header>
 
@@ -68,28 +58,44 @@
                 </p>
             </section>
 
-            <section id="highlights" class="my-12">
+            <section id="highlights" class="my-12 bg-white rounded-xl shadow-md p-6 md:p-8">
                 <h2 class="text-3xl font-bold text-center mb-8 text-gray-900">Key Performance Highlights</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="highlight-card bg-white rounded-xl shadow-md p-6 text-center">
-                        <div class="text-5xl mb-4">✨</div>
-                        <h3 class="text-xl font-bold mb-2">Effortless Enrollment</h3>
-                        <p class="text-gray-600">The reader actively guides users to ensure a perfect biometric capture every time, eliminating user frustration and errors.</p>
+                <div class="grid md:grid-cols-2 gap-x-12 gap-y-8">
+                    <div class="feature-item bg-blue-50 p-6 rounded-lg">
+                        <h3 class="text-2xl font-bold text-blue-800 mb-3">The Smartest Enrollment We've Seen</h3>
+                        <p class="text-gray-700 mb-4">The enrollment process is the reader's greatest strength. Unlike other systems, it doesn't allow for poor-quality captures.</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-blue-600 font-bold mr-2">🤖</span>
+                                <div>
+                                    <strong class="text-gray-800">AI-Guided Positioning:</strong> The reader provides real-time on-screen tips like "Come closer" or "Move left," actively forcing the user into the perfect position. This ensures a flawless biometric template is captured on the first try, every time.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 font-bold mr-2">💨</span>
+                                <div>
+                                    <strong class="text-gray-800">Flexible Enrollment Methods:</strong> Testing confirmed success with both static (close-up) and dynamic "walk-up" enrollments, where the face was captured on-the-fly from 1.8m away.
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="highlight-card bg-white rounded-xl shadow-md p-6 text-center">
-                        <div class="text-5xl mb-4">⚡️</div>
-                        <h3 class="text-xl font-bold mb-2">Instant Recognition</h3>
-                        <p class="text-gray-600">Access was granted in split seconds, even in complete darkness, thanks to the reader's adaptive illuminator.</p>
-                    </div>
-                    <div class="highlight-card bg-white rounded-xl shadow-md p-6 text-center">
-                        <div class="text-5xl mb-4">🚶‍♂️💨</div>
-                        <h3 class="text-xl font-bold mb-2">"Walk-Through" Convenience</h3>
-                        <p class="text-gray-600">Successfully identified users "on the fly" from over 2 meters away, providing a true touchless experience.</p>
-                    </div>
-                    <div class="highlight-card bg-white rounded-xl shadow-md p-6 text-center">
-                        <div class="text-5xl mb-4">🔗</div>
-                        <h3 class="text-xl font-bold mb-2">Flawless Integration</h3>
-                        <p class="text-gray-600">The device worked perfectly with the Gallagher Command Centre from the moment it was connected.</p>
+                    <div class="feature-item bg-blue-50 p-6 rounded-lg">
+                        <h3 class="text-2xl font-bold text-blue-800 mb-3">Recognition in Any Condition</h3>
+                        <p class="text-gray-700 mb-4">The reader's performance was consistently outstanding, regardless of environmental challenges.</p>
+                         <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-blue-600 font-bold mr-2">💡</span>
+                                <div>
+                                    <strong class="text-gray-800">Adaptive Illuminator:</strong> In dark conditions, the reader's built-in illuminator activated instantly, lighting up the user's face to guarantee recognition. Performance was never degraded by poor lighting.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 font-bold mr-2">⚡️</span>
+                                <div>
+                                    <strong class="text-gray-800">Split-Second Speed:</strong> In all tests, recognition was nearly instantaneous. Even when approaching from 2.5 meters away or from wide angles, the reader identified the user and opened the door in just 2-3 seconds.
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </section>
