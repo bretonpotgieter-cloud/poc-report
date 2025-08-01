@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PoC Report: Idemia VisionPass SP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Corporate Calm -->
+    <!-- Application Structure Plan: A linear, single-page narrative structure was chosen to directly translate the concise, persuasive flow of the source summary. This is ideal for a busy executive, guiding them from the problem statement to the successful outcome and visual proof without requiring complex navigation. The flow is: Hero -> Problem/Solution -> Key Highlights -> Visual Evidence -> Final Verdict. This ensures the key message is delivered clearly and effectively. -->
+    <!-- Visualization & Content Choices: 
+        - Comparison: Report Info: Old Suprema vs. New Idemia. Goal: Compare. Viz: HTML/CSS table with icons (❌/✔). Interaction: None, static display. Justification: A simple visual comparison is more direct and impactful for qualitative differences than a complex chart.
+        - Highlights: Report Info: Four key performance highlights. Goal: Inform/Impress. Viz: Interactive HTML cards with Unicode icons. Interaction: Hover effects to add engagement. Justification: Cards break down information into digestible chunks, and subtle interaction makes the experience more dynamic.
+        - Videos: Report Info: Three UI mode videos. Goal: Provide proof. Viz: A simulated video player (HTML/JS). Interaction: Clickable thumbnails to switch content. Justification: This mimics a real media player, making the "visual evidence" section feel functional and interactive.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .highlight-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .highlight-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        .video-thumbnail.active {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+        }
+        .video-thumbnail {
+            transition: all 0.2s ease-in-out;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <div class="max-w-5xl mx-auto p-4 sm:p-8">
+
+        <header class="text-center py-8 md:py-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight">
+                Idemia VisionPass SP
+            </h1>
+            <p class="mt-4 text-xl md:text-2xl font-medium text-blue-600">A Resounding Success at Riverlands</p>
+        </header>
+
+        <main>
+            <section id="goal" class="bg-white rounded-xl shadow-md p-6 md:p-8 my-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">The Goal</h2>
+                <p class="text-lg text-gray-700">
+                    To find a reliable, high-performance access control reader that solves the persistent issues of the old Suprema units and integrates flawlessly with our Gallagher system.
+                </p>
+            </section>
+
+            <section id="result" class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white rounded-xl shadow-lg p-8 my-8 text-center">
+                <h2 class="text-3xl font-extrabold mb-2">The Result: An Unqualified Success.</h2>
+                <p class="text-lg opacity-90">
+                    The Idemia VisionPass SP has proven to be a superior solution in every respect. It is fast, intelligent, and provides an exceptionally positive user experience. The installation by FANG was professional and seamless.
+                </p>
+            </section>
+
+            <section id="highlights" class="my-12">
+                <h2 class="text-3xl font-bold text-center mb-8 text-gray-900">Key Performance Highlights</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="highlight-card bg-white rounded-xl shadow-md p-6 text-center">
+                        <div class="text-5xl mb-4">✨</div>
+                        <h3 class="text-xl font-bold mb-2">Effortless Enrollment</h3>
+                        <p class="text-gray-600">The reader actively guides users to ensure a perfect biometric capture every time, eliminating user frustration and errors.</p>
+                    </div>
+                    <div class="highlight-card bg-white rounded-xl shadow-md p-6 text-center">
+                        <div class="text-5xl mb-4">⚡️</div>
+                        <h3 class="text-xl font-bold mb-2">Instant Recognition</h3>
+                        <p class="text-gray-600">Access was granted in split seconds, even in complete darkness, thanks to the reader's adaptive illuminator.</p>
+                    </div>
+                    <div class="highlight-card bg-white rounded-xl shadow-md p-6 text-center">
+                        <div class="text-5xl mb-4">🚶‍♂️💨</div>
+                        <h3 class="text-xl font-bold mb-2">"Walk-Through" Convenience</h3>
+                        <p class="text-gray-600">Successfully identified users "on the fly" from over 2 meters away, providing a true touchless experience.</p>
+                    </div>
+                    <div class="highlight-card bg-white rounded-xl shadow-md p-6 text-center">
+                        <div class="text-5xl mb-4">🔗</div>
+                        <h3 class="text-xl font-bold mb-2">Flawless Integration</h3>
+                        <p class="text-gray-600">The device worked perfectly with the Gallagher Command Centre from the moment it was connected.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="evidence" class="my-12">
+                <h2 class="text-3xl font-bold text-center mb-2 text-gray-900">Visual Evidence: Live from Riverlands</h2>
+                <p class="text-center text-lg text-gray-600 mb-8">Breton Potgieter (EES LIVE) tested the reader's user interface options, demonstrating a clean and intuitive experience.</p>
+                
+                <div class="bg-white rounded-xl shadow-lg p-4 sm:p-6">
+                    <div class="chart-container relative w-full max-w-2xl mx-auto h-auto aspect-video bg-black rounded-lg flex items-center justify-center overflow-hidden">
+                        <iframe id="video-player-frame" class="w-full h-full" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                    <div id="video-description" class="text-center mt-4 text-gray-700 font-medium h-6">Select a UI mode to see its description.</div>
+
+                    <div class="flex justify-center items-center gap-4 mt-6 flex-wrap">
+                        <button class="video-thumbnail border-4 border-transparent rounded-lg focus:outline-none" data-video="1">
+                            <img src="https://placehold.co/160x90/334155/FFFFFF?text=Full+Camera" alt="Full Camera View" class="rounded-md">
+                        </button>
+                        <button class="video-thumbnail border-4 border-transparent rounded-lg focus:outline-none" data-video="2">
+                             <img src="https://placehold.co/160x90/334155/FFFFFF?text=Face+Symbol" alt="Face Symbol View" class="rounded-md">
+                        </button>
+                        <button class="video-thumbnail border-4 border-transparent rounded-lg focus:outline-none" data-video="3">
+                             <img src="https://placehold.co/160x90/334155/FFFFFF?text=Text-Only" alt="Text-Only View" class="rounded-md">
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center py-12">
+            <div class="bg-gray-900 text-white rounded-xl shadow-lg p-8">
+                <h2 class="text-3xl font-extrabold mb-2">Final Verdict</h2>
+                <p class="text-lg opacity-90">
+                    The Idemia VisionPass SP has outperformed the legacy system on all fronts. Its advanced technology provides the reliability and positive user experience that the Riverlands development requires. <br><strong class="mt-2 block">This is the right solution for our project.</strong>
+                </p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const videoThumbnails = document.querySelectorAll('.video-thumbnail');
+            const videoPlayerFrame = document.getElementById('video-player-frame');
+            const videoDescription = document.getElementById('video-description');
+
+            const videoData = {
+                '1': {
+                    url: 'https://drive.google.com/file/d/1nXTGRiFe7V5DhGzPpH2x8u5_4X0Tk-zb/preview',
+                    description: "Shows the user's name and access status overlaid on the live camera feed."
+                },
+                '2': {
+                    url: 'https://drive.google.com/file/d/1nepsQJoFVDgnJLyEOh1Zsk7XA0XWffxG/preview',
+                    description: 'A minimalist UI showing a face icon with the user\'s name and status.'
+                },
+                '3': {
+                    url: 'https://drive.google.com/file/d/1ngTeJfSIHnWpndQD3Aawc6YeFmfkZjG4/preview',
+                    description: "A discreet display showing only the user's name and access status."
+                }
+            };
+
+            // Set initial state
+            videoPlayerFrame.src = "";
+            videoDescription.textContent = "Select a UI mode to view the video.";
+
+            videoThumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', () => {
+                    const videoId = thumbnail.dataset.video;
+                    
+                    videoThumbnails.forEach(btn => btn.classList.remove('active'));
+                    thumbnail.classList.add('active');
+                    
+                    if (videoData[videoId] && videoData[videoId].url.startsWith('https')) {
+                        videoPlayerFrame.src = videoData[videoId].url;
+                        videoDescription.textContent = videoData[videoId].description;
+                    } else {
+                        videoPlayerFrame.src = "";
+                        videoDescription.textContent = "Video link is not available yet.";
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
